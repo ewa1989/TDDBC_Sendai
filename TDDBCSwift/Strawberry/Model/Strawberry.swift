@@ -14,11 +14,11 @@ enum Type: String {
     case MOUIKKO = "もういっこ"
 }
 
-enum Size: String {
-    case S
-    case M
-    case L
-    case LL
+enum Size: Int {
+    case S = 0
+    case M = 1
+    case L = 2
+    case LL = 3
 }
 
 struct Strawberry {
@@ -54,5 +54,9 @@ struct Strawberry {
     
     func isSameType(_ another: Strawberry) -> Bool {
         return self.type == another.type
+    }
+    
+    func getSizeDifference(_ another: Strawberry) -> Int {
+        return abs(self.size.rawValue - another.size.rawValue)
     }
 }

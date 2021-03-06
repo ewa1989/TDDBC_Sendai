@@ -71,16 +71,17 @@
 //もういっこ S と もういっこ LL の サイズ差 は 3 です
 
 //TODO
-// - [] いちごのサイズ差を取得できる
-//    - [] サイズを取得するプロパティを作る
-//    - [] サイズのEnumに数値を与える
-//    - [] サイズ差を取得する関数を作る
+// - [x] いちごのサイズ差を取得できる
+//    - [x] サイズを取得するプロパティを作る
+//    - [x] サイズのEnumに数値を与える
+//    - [x] サイズ差を取得する関数を作る
 
 
 import XCTest
 
 class StrawberryTest: XCTestCase {
-
+    private var subject: Strawberry!
+    
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -92,25 +93,25 @@ class StrawberryTest: XCTestCase {
     // MARK: 品種とサイズを渡して文字列表現を出力する
     
     func testあまおうとサイズSを入力したらあまおう_Sの文字列表現を取得できる() {
-        let subject = Strawberry(.AMAOU, .S)
+        subject = Strawberry(.AMAOU, .S)
 
         XCTAssertEqual(subject.toString(), "あまおう: S")
     }
     
     func testとちおとめとサイズMを入力したらとちおとめ_Mの文字列表現を取得できる() {
-        let subject = Strawberry(.TOCHIOTOME, .M)
+        subject = Strawberry(.TOCHIOTOME, .M)
 
         XCTAssertEqual(subject.toString(), "とちおとめ: M")
     }
     
     func testもういっことサイズLLを入力したらもういっこ_LLの文字列表現を取得できる() {
-        let subject = Strawberry(.MOUIKKO, .LL)
+        subject = Strawberry(.MOUIKKO, .LL)
         
         XCTAssertEqual(subject.toString(), "もういっこ: LL")
     }
     
     func testあまおうとサイズLを入力したらあまおう_Lの文字列表現を取得できる() {
-        let subject = Strawberry(.AMAOU, .L)
+        subject = Strawberry(.AMAOU, .L)
         
         XCTAssertEqual(subject.toString(), "あまおう: L")
     }
@@ -118,39 +119,70 @@ class StrawberryTest: XCTestCase {
     // MARK: - 与えた重さによってサイズが決まる
 
     func testとちおとめと重さ25g入力したらとちおとめ_LLの文字列表現を取得できる() {
-        let subject = Strawberry(.TOCHIOTOME, 25)
+        subject = Strawberry(.TOCHIOTOME, 25)
 
         XCTAssertEqual(subject.toString(), "とちおとめ: LL")
     }
 
     func testもういっこと重さ20g入力したらもういっこ_Lの文字列表現を取得できる() {
-        let subject = Strawberry(.MOUIKKO, 20)
+        subject = Strawberry(.MOUIKKO, 20)
 
         XCTAssertEqual(subject.toString(), "もういっこ: L")
     }
 
     func testあまおうと重さ10g入力したらあまおう_Mの文字列表現を取得できる() {
-        let subject = Strawberry(.AMAOU, 10)
+        subject = Strawberry(.AMAOU, 10)
 
         XCTAssertEqual(subject.toString(), "あまおう: M")
     }
     
     func testもういっこと重さ1g入力したらもういっこ_Sの文字列表現を取得できる() {
-        let subject = Strawberry(.MOUIKKO, 1)
+        subject = Strawberry(.MOUIKKO, 1)
 
         XCTAssertEqual(subject.toString(), "もういっこ: S")
     }
 
 // MARK:- 品種が同じか否かを判断する
     func testあまおうLとあまおうSは同じ品種である() {
-        let subject = Strawberry(.AMAOU, .L)
+        subject = Strawberry(.AMAOU, .L)
         let another = Strawberry(.AMAOU, .S)
+        
         XCTAssert(subject.isSameType(another))
     }
     
     func testあまおうMととちおとめMは違う品種である() {
-        let subject = Strawberry(.AMAOU, .M)
+        subject = Strawberry(.AMAOU, .M)
         let another = Strawberry(.TOCHIOTOME, .M)
+        
         XCTAssertFalse(subject.isSameType(another))
+    }
+    
+    // MARK:- サイズ差を取得できる
+    func testとちおとめSとあまおうSのサイズ差は0である() {
+        subject = Strawberry(.TOCHIOTOME, .S)
+        let another = Strawberry(.AMAOU, .S)
+        
+        XCTAssertEqual(subject.getSizeDifference(another), 0)
+    }
+    
+    func testとちおとめLともういっこMのサイズ差は1である() {
+        subject = Strawberry(.TOCHIOTOME, .L)
+        let another = Strawberry(.MOUIKKO, .M)
+        
+        XCTAssertEqual(subject.getSizeDifference(another), 1)
+    }
+    
+    func testあまおうLLととちおとめMのサイズ差は2である() {
+        subject = Strawberry(.AMAOU, .LL)
+        let another = Strawberry(.TOCHIOTOME, .M)
+        
+        XCTAssertEqual(subject.getSizeDifference(another), 2)
+    }
+    
+    func testもういっこSともういっこLLのサイズ差は3である() {
+        subject = Strawberry(.MOUIKKO, .S)
+        let another = Strawberry(.MOUIKKO, .LL)
+        
+        XCTAssertEqual(subject.getSizeDifference(another), 3)
     }
 }
