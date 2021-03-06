@@ -39,9 +39,9 @@ struct Strawberry {
         switch weight {
         case (25...):
             return .LL
-        case (20...24):
+        case (20..<25):
             return .L
-        case (10...19):
+        case (10..<20):
             return .M
         default :
             return .S
