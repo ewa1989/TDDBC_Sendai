@@ -36,11 +36,11 @@
 //例えば、 重さが 8g の あまおうの場合は、 あまおう: S という文字列表現になります。
 
 // - [x] 品種と重さを与えていちごを作成できる
-// - [] 与えた重さによってサイズが決まる
+// - [x] 与えた重さによってサイズが決まる
 //   - [x] 25g以上 → LL
 //   - [x] 20g以上 → L
 //   - [X] 10g以上 → M
-//   - [] 1g以上 → S
+//   - [x] 1g以上 → S
 import XCTest
 
 class StrawberryTest: XCTestCase {
@@ -81,22 +81,10 @@ class StrawberryTest: XCTestCase {
 
     // MARK: - 与えた重さによってサイズが決まる
 
-    func testあまおうと重さ35g入力したらあまおう_LLの文字列表現を取得できる() {
-        let subject = Strawberry(.AMAOU, 35)
-
-        XCTAssertEqual(subject.toString(), "あまおう: LL")
-    }
-
     func testとちおとめと重さ25g入力したらとちおとめ_LLの文字列表現を取得できる() {
         let subject = Strawberry(.TOCHIOTOME, 25)
 
         XCTAssertEqual(subject.toString(), "とちおとめ: LL")
-    }
-
-    func testとちおとめと重さ24g入力したらとちおとめ_Lの文字列表現を取得できる() {
-        let subject = Strawberry(.TOCHIOTOME, 24)
-        
-        XCTAssertEqual(subject.toString(), "とちおとめ: L")
     }
 
     func testもういっこと重さ20g入力したらもういっこ_Lの文字列表現を取得できる() {
@@ -109,5 +97,11 @@ class StrawberryTest: XCTestCase {
         let subject = Strawberry(.AMAOU, 10)
 
         XCTAssertEqual(subject.toString(), "あまおう: M")
+    }
+    
+    func testもういっこと重さ1g入力したらもういっこ_Sの文字列表現を取得できる() {
+        let subject = Strawberry(.MOUIKKO, 1)
+
+        XCTAssertEqual(subject.toString(), "もういっこ: S")
     }
 }

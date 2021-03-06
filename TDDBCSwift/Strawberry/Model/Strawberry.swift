@@ -32,14 +32,19 @@ struct Strawberry {
     
     init(_ type: Type, _ weight: Int) {
         self.type = type
-
+        self.size = Strawberry.determineSize(basedOn: weight)
+    }
+    
+    private static func determineSize(basedOn weight: Int) -> Size {
         switch weight {
         case weight where weight >= 25:
-            self.size = .LL
+            return .LL
         case weight where weight >= 20:
-            self.size = .L
+            return .L
+        case weight where weight >= 10:
+            return .M
         default :
-            self.size = .M
+            return .S
         }
     }
     
