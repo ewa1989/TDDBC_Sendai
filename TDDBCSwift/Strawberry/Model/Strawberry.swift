@@ -51,4 +51,8 @@ struct Strawberry {
     func toString() -> String {
         return "\(type.rawValue): \(size)"
     }
+    
+    func isSameType(_ another: Strawberry) -> Bool {
+        return self.type == another.type
+    }
 }

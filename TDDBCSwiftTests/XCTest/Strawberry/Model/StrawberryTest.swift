@@ -135,8 +135,15 @@ class StrawberryTest: XCTestCase {
     }
 
 // MARK:- 品種が同じか否かを判断する
-   func testあまおうLとあまおうSは同じ品種である() {
-
-   }
-
+    func testあまおうLとあまおうSは同じ品種である() {
+        let subject = Strawberry(.AMAOU, .L)
+        let another = Strawberry(.AMAOU, .S)
+        XCTAssert(subject.isSameType(another))
+    }
+    
+    func testあまおうMととちおとめLLは違う品種である() {
+        let subject = Strawberry(.AMAOU, .M)
+        let another = Strawberry(.TOCHIOTOME, .LL)
+        XCTAssertFalse(subject.isSameType(another))
+    }
 }
