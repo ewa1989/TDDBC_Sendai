@@ -40,6 +40,8 @@ class StrawberryTest: XCTestCase {
     }
     
     func testとちおとめとサイズMを入力したらとちおとめ_Mの文字列表現を取得できる() {
-        
+        let subject = Strawberry(.TOCHIOTOME, .M)
+
+        XCTAssertEqual(subject.toString(), "とちおとめ: M")
     }
 }

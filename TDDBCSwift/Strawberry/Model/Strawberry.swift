@@ -9,18 +9,25 @@
 import Foundation
 
 enum Type: String {
-    case AMAOU
+    case AMAOU = "あまおう"
+    case TOCHIOTOME = "とちおとめ"
 }
 
 enum Size: String {
     case S
+    case M
 }
 
 struct Strawberry {
+    let type: Type
+    let size: Size
+
     init(_ type: Type, _ size: Size) {
+        self.type = type
+        self.size = size
     }
     
     func toString() -> String {
-        return "あまおう: S"
+        return "\(type.rawValue): \(size)"
     }
 }
