@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2475E28BE43743071E748308 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E38E726EC3D670B210AF /* Sample.swift */; };
 		60B177A025F31438006B433D /* StrawberryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B1779F25F31438006B433D /* StrawberryTest.swift */; };
+		60B177A825F3199D006B433D /* Strawberry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B177A725F3199D006B433D /* Strawberry.swift */; };
+		60B177AD25F31A6E006B433D /* Strawberry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B177A725F3199D006B433D /* Strawberry.swift */; };
 		62D11D8B1F7F56EC00739528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D11D8A1F7F56EC00739528 /* AppDelegate.swift */; };
 		62D11D8D1F7F56EC00739528 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D11D8C1F7F56EC00739528 /* ViewController.swift */; };
 		62D11D901F7F56EC00739528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D11D8E1F7F56EC00739528 /* Main.storyboard */; };
@@ -41,6 +43,7 @@
 		2475EB12A3CB11BCC92EB7A3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2475EF0900E7AE011CC38D2E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		60B1779F25F31438006B433D /* StrawberryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrawberryTest.swift; sourceTree = "<group>"; };
+		60B177A725F3199D006B433D /* Strawberry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strawberry.swift; sourceTree = "<group>"; };
 		62AB32AD215F0C8E00758E78 /* MirrorDiffKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MirrorDiffKit.framework; path = Carthage/Build/iOS/MirrorDiffKit.framework; sourceTree = "<group>"; };
 		62D11D871F7F56EC00739528 /* TDDBCSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDDBCSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62D11D8A1F7F56EC00739528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -100,6 +103,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		60B177A525F31955006B433D /* Strawberry */ = {
+			isa = PBXGroup;
+			children = (
+				60B177A625F31961006B433D /* Model */,
+			);
+			path = Strawberry;
+			sourceTree = "<group>";
+		};
+		60B177A625F31961006B433D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				60B177A725F3199D006B433D /* Strawberry.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		62D11D7E1F7F56EC00739528 = {
 			isa = PBXGroup;
 			children = (
@@ -126,6 +145,7 @@
 		62D11D891F7F56EC00739528 /* TDDBCSwift */ = {
 			isa = PBXGroup;
 			children = (
+				60B177A525F31955006B433D /* Strawberry */,
 				62D11D8A1F7F56EC00739528 /* AppDelegate.swift */,
 				62D11D911F7F56EC00739528 /* Assets.xcassets */,
 				62D11D961F7F56EC00739528 /* Info.plist */,
@@ -280,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60B177A825F3199D006B433D /* Strawberry.swift in Sources */,
 				62D11D8D1F7F56EC00739528 /* ViewController.swift in Sources */,
 				62D11D8B1F7F56EC00739528 /* AppDelegate.swift in Sources */,
 				2475E28BE43743071E748308 /* Sample.swift in Sources */,
@@ -290,6 +311,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				60B177AD25F31A6E006B433D /* Strawberry.swift in Sources */,
 				62D11DAD1F7F580E00739528 /* ExampleQuickTests.swift in Sources */,
 				60B177A025F31438006B433D /* StrawberryTest.swift in Sources */,
 				62D11DA01F7F56EC00739528 /* ExampleXCTestTests.swift in Sources */,

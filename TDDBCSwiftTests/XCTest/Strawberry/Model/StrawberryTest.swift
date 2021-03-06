@@ -34,7 +34,7 @@ class StrawberryTest: XCTestCase {
     }
 
     func testあまおうとサイズSを入力したらあまおう_Sの文字列表現を取得できる() throws {
-        let subject = Strawberry(AMAOU,S)
+        let subject = Strawberry(.AMAOU, .S)
 
         XCTAssertEqual(subject.toString(), "あまおう: S")
     }
