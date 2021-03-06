@@ -33,7 +33,9 @@ class StrawberryTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testあまおうとサイズSを入力したらあまおう_Sの文字列表現を取得できる() throws {
+    // MARK: 品種とサイズを渡して文字列表現を出力する
+    
+    func testあまおうとサイズSを入力したらあまおう_Sの文字列表現を取得できる() {
         let subject = Strawberry(.AMAOU, .S)
 
         XCTAssertEqual(subject.toString(), "あまおう: S")
