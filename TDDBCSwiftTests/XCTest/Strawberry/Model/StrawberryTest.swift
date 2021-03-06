@@ -14,11 +14,12 @@
 
 // TODO
 // - [] Strawberryをstructで作成する
-// - [] 品種とサイズを引数に取るコンストラクタを作成する
-// - [] 品種をenum: Stringで定義する
-// - [] サイズをenum: Stringで定義する
-// - [] 文字列表現を取得できる方法を作成する
-// - [] 取得できる文字列表現の書式を決定する
+//   - [] 品種とサイズを引数に取るコンストラクタを作成する
+//   - [] 品種をenum: Stringで定義する
+//   - [] サイズをenum: Stringで定義する
+// - [] Strawberryの文字列表現を取得する
+//   - [] 文字列表現を取得できる方法を作成する
+//   - [] 取得できる文字列表現の書式を決定する
 
 import XCTest
 
@@ -32,8 +33,9 @@ class StrawberryTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testあまおうとサイズSを入力したらあまおう_Sの文字列表現を取得できる() throws {
+        let subject = Strawberry(AMAOU,S)
+
+        XCTAssertEqual(subject.toString(), "あまおう: S")
     }
 }
