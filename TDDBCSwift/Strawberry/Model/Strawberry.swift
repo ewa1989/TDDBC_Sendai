@@ -30,6 +30,11 @@ struct Strawberry {
         self.size = size
     }
     
+    init(_ type: Type, _ weight: Int) {
+        self.type = type
+        self.size = .L
+    }
+    
     func toString() -> String {
         return "\(type.rawValue): \(size)"
     }
