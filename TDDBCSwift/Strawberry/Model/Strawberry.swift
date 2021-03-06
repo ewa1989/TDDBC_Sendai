@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum Type {
+enum Type: String {
     case AMAOU
 }
 
-enum Size {
+enum Size: String {
     case S
 }
 
