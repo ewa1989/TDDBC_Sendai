@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2475E28BE43743071E748308 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2475E38E726EC3D670B210AF /* Sample.swift */; };
+		60B177A025F31438006B433D /* StrawberryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B1779F25F31438006B433D /* StrawberryTest.swift */; };
 		62D11D8B1F7F56EC00739528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D11D8A1F7F56EC00739528 /* AppDelegate.swift */; };
 		62D11D8D1F7F56EC00739528 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D11D8C1F7F56EC00739528 /* ViewController.swift */; };
 		62D11D901F7F56EC00739528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D11D8E1F7F56EC00739528 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		2475EAC2FE8BE30709BB9C3D /* Cartfile.resolved */ = {isa = PBXFileReference; lastKnownFileType = file.resolved; path = Cartfile.resolved; sourceTree = "<group>"; };
 		2475EB12A3CB11BCC92EB7A3 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		2475EF0900E7AE011CC38D2E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		60B1779F25F31438006B433D /* StrawberryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrawberryTest.swift; sourceTree = "<group>"; };
 		62AB32AD215F0C8E00758E78 /* MirrorDiffKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MirrorDiffKit.framework; path = Carthage/Build/iOS/MirrorDiffKit.framework; sourceTree = "<group>"; };
 		62D11D871F7F56EC00739528 /* TDDBCSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDDBCSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62D11D8A1F7F56EC00739528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60B1779D25F313D4006B433D /* Strawberry */ = {
+			isa = PBXGroup;
+			children = (
+				60B1779E25F313FC006B433D /* Model */,
+			);
+			path = Strawberry;
+			sourceTree = "<group>";
+		};
+		60B1779E25F313FC006B433D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				60B1779F25F31438006B433D /* StrawberryTest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		62D11D7E1F7F56EC00739528 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +158,7 @@
 		62D11DAB1F7F579E00739528 /* XCTest */ = {
 			isa = PBXGroup;
 			children = (
+				60B1779D25F313D4006B433D /* Strawberry */,
 				62D11D9F1F7F56EC00739528 /* ExampleXCTestTests.swift */,
 			);
 			path = XCTest;
@@ -272,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62D11DAD1F7F580E00739528 /* ExampleQuickTests.swift in Sources */,
+				60B177A025F31438006B433D /* StrawberryTest.swift in Sources */,
 				62D11DA01F7F56EC00739528 /* ExampleXCTestTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
