@@ -38,4 +38,8 @@ class StrawberryTest: XCTestCase {
 
         XCTAssertEqual(subject.toString(), "あまおう: S")
     }
+    
+    func testとちおとめとサイズMを入力したらとちおとめ_Mの文字列表現を取得できる() {
+        
+    }
 }
