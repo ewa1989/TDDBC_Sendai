@@ -76,7 +76,6 @@
 //    - [x] サイズのEnumに数値を与える
 //    - [x] サイズ差を取得する関数を作る
 
-
 import XCTest
 
 class StrawberryTest: XCTestCase {

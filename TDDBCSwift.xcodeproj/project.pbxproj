@@ -11,6 +11,9 @@
 		60B177A025F31438006B433D /* StrawberryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B1779F25F31438006B433D /* StrawberryTest.swift */; };
 		60B177A825F3199D006B433D /* Strawberry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B177A725F3199D006B433D /* Strawberry.swift */; };
 		60B177AD25F31A6E006B433D /* Strawberry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B177A725F3199D006B433D /* Strawberry.swift */; };
+		60B177B125F35F2C006B433D /* StrawberryPackTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B177B025F35F2C006B433D /* StrawberryPackTest.swift */; };
+		60B177B525F35FC4006B433D /* StrawberryPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B177B425F35FC4006B433D /* StrawberryPack.swift */; };
+		60B177B625F35FC4006B433D /* StrawberryPack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60B177B425F35FC4006B433D /* StrawberryPack.swift */; };
 		62D11D8B1F7F56EC00739528 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D11D8A1F7F56EC00739528 /* AppDelegate.swift */; };
 		62D11D8D1F7F56EC00739528 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62D11D8C1F7F56EC00739528 /* ViewController.swift */; };
 		62D11D901F7F56EC00739528 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62D11D8E1F7F56EC00739528 /* Main.storyboard */; };
@@ -44,6 +47,8 @@
 		2475EF0900E7AE011CC38D2E /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		60B1779F25F31438006B433D /* StrawberryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrawberryTest.swift; sourceTree = "<group>"; };
 		60B177A725F3199D006B433D /* Strawberry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strawberry.swift; sourceTree = "<group>"; };
+		60B177B025F35F2C006B433D /* StrawberryPackTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrawberryPackTest.swift; sourceTree = "<group>"; };
+		60B177B425F35FC4006B433D /* StrawberryPack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrawberryPack.swift; sourceTree = "<group>"; };
 		62AB32AD215F0C8E00758E78 /* MirrorDiffKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MirrorDiffKit.framework; path = Carthage/Build/iOS/MirrorDiffKit.framework; sourceTree = "<group>"; };
 		62D11D871F7F56EC00739528 /* TDDBCSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TDDBCSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62D11D8A1F7F56EC00739528 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -99,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				60B1779F25F31438006B433D /* StrawberryTest.swift */,
+				60B177B025F35F2C006B433D /* StrawberryPackTest.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -115,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				60B177A725F3199D006B433D /* Strawberry.swift */,
+				60B177B425F35FC4006B433D /* StrawberryPack.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -303,6 +310,7 @@
 				60B177A825F3199D006B433D /* Strawberry.swift in Sources */,
 				62D11D8D1F7F56EC00739528 /* ViewController.swift in Sources */,
 				62D11D8B1F7F56EC00739528 /* AppDelegate.swift in Sources */,
+				60B177B525F35FC4006B433D /* StrawberryPack.swift in Sources */,
 				2475E28BE43743071E748308 /* Sample.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,9 +320,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				60B177AD25F31A6E006B433D /* Strawberry.swift in Sources */,
+				60B177B625F35FC4006B433D /* StrawberryPack.swift in Sources */,
 				62D11DAD1F7F580E00739528 /* ExampleQuickTests.swift in Sources */,
 				60B177A025F31438006B433D /* StrawberryTest.swift in Sources */,
 				62D11DA01F7F56EC00739528 /* ExampleXCTestTests.swift in Sources */,
+				60B177B125F35F2C006B433D /* StrawberryPackTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
