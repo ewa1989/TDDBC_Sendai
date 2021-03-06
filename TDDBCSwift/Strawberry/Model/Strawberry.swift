@@ -32,11 +32,14 @@ struct Strawberry {
     
     init(_ type: Type, _ weight: Int) {
         self.type = type
-        
-        if (weight >= 25) {
+
+        switch weight {
+        case weight where weight >= 25:
             self.size = .LL
-        } else {
+        case weight where weight >= 20:
             self.size = .L
+        default :
+            self.size = .M
         }
     }
     
