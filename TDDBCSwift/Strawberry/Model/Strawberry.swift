@@ -37,11 +37,11 @@ struct Strawberry {
     
     private static func determineSize(basedOn weight: Int) -> Size {
         switch weight {
-        case weight where weight >= 25:
+        case (25...):
             return .LL
-        case weight where weight >= 20:
+        case (20...24):
             return .L
-        case weight where weight >= 10:
+        case (10...19):
             return .M
         default :
             return .S
