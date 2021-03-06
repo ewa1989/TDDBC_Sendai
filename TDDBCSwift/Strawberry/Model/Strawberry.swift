@@ -32,7 +32,12 @@ struct Strawberry {
     
     init(_ type: Type, _ weight: Int) {
         self.type = type
-        self.size = .LL
+        
+        if (weight >= 25) {
+            self.size = .LL
+        } else {
+            self.size = .L
+        }
     }
     
     func toString() -> String {
