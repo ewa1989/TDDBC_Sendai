@@ -35,7 +35,7 @@
 //1g以上 → S
 //例えば、 重さが 8g の あまおうの場合は、 あまおう: S という文字列表現になります。
 
-// - [] 品種と重さを与えていちごを作成できる
+// - [x] 品種と重さを与えていちごを作成できる
 // - [] 与えた重さによってサイズが決まる
 //   - [] 25g以上 → LL
 //   - [] 20g以上 → L
@@ -81,9 +81,9 @@ class StrawberryTest: XCTestCase {
 
     // MARK: - 与えた重さによってサイズが決まる
 
-    func test重さを与えることができる() {
-        let subject = Strawberry(.AMAOU, 10)
+    func testあまおうと重さ35g入力したらあまおう_LLの文字列表現を取得できる() {
+        let subject = Strawberry(.AMAOU, 35)
 
-        XCTAssertNotNil(subject)
+        XCTAssertEqual(subject.toString(), "あまおう: LL")
     }
 }

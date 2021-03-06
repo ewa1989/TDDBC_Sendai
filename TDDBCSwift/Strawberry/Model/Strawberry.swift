@@ -32,7 +32,7 @@ struct Strawberry {
     
     init(_ type: Type, _ weight: Int) {
         self.type = type
-        self.size = .L
+        self.size = .LL
     }
     
     func toString() -> String {
