@@ -17,6 +17,7 @@ enum Type: String {
 enum Size: String {
     case S
     case M
+    case L
     case LL
 }
 

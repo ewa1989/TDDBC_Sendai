@@ -13,13 +13,13 @@
 //なお、品種は、 あまおう とちおとめ もういっこ の3種類、いちごのサイズは S M L LL の4種類です。
 
 // TODO
-// - [] Strawberryをstructで作成する
+// - [x] Strawberryをstructで作成する
 //   - [x] 品種とサイズを引数に取るコンストラクタを作成する
 //   - [x] 品種をenum: Stringで定義する
 //   - [x] サイズをenum: Stringで定義する
-// - [] Strawberryの文字列表現を取得する
+// - [x] Strawberryの文字列表現を取得する
 //   - [x] 文字列表現を取得できる方法を作成する
-//   - [] 取得できる文字列表現の書式を決定する
+//   - [x] 取得できる文字列表現の書式を決定する
 
 import XCTest
 
@@ -49,5 +49,11 @@ class StrawberryTest: XCTestCase {
         let subject = Strawberry(.MOUIKKO, .LL)
         
         XCTAssertEqual(subject.toString(), "もういっこ: LL")
+    }
+    
+    func testあまおうとサイズLを入力したらあまおう_Lの文字列表現を取得できる() {
+        let subject = Strawberry(.AMAOU, .L)
+        
+        XCTAssertEqual(subject.toString(), "あまおう: L")
     }
 }
