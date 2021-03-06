@@ -11,11 +11,13 @@ import Foundation
 enum Type: String {
     case AMAOU = "あまおう"
     case TOCHIOTOME = "とちおとめ"
+    case MOUIKKO = "もういっこ"
 }
 
 enum Size: String {
     case S
     case M
+    case LL
 }
 
 struct Strawberry {
