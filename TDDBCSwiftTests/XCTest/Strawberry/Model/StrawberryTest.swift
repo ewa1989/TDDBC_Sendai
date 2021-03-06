@@ -141,9 +141,9 @@ class StrawberryTest: XCTestCase {
         XCTAssert(subject.isSameType(another))
     }
     
-    func testあまおうMととちおとめLLは違う品種である() {
+    func testあまおうMととちおとめMは違う品種である() {
         let subject = Strawberry(.AMAOU, .M)
-        let another = Strawberry(.TOCHIOTOME, .LL)
+        let another = Strawberry(.TOCHIOTOME, .M)
         XCTAssertFalse(subject.isSameType(another))
     }
 }
